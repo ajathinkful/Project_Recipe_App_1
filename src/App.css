@@ -4,57 +4,66 @@
   padding: 1em;
 }
 
-label {
-  display: inline-block;
-  width: 100px;
-}
-
 header {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* typography */
-
-html {
-  font-family: 'helvetica neue', sans-serif;
-}
-
-thead th, tfoot th {
-  font-family: 'Rock Salt';
-}
-
-th {
-  letter-spacing: 2px;
-  padding: 10px;
-}
-
-td {
-  letter-spacing: 1px;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  font-size: 12px;
-  padding: 10px;
   text-align: center;
 }
 
-/* table */
+h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 64px;
+  margin-bottom: 0;
+}
 
 table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  overflow:hidden;
+  overflow: hidden;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.content_td p {
+thead th, tfoot th {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: 2px;
+  padding: 10px;
+  text-align: center;
+  width: 10%; /* Set width for non-preparation and non-ingredient columns */
+}
+
+th, td {
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Set specific width for preparation and ingredient columns */
+th:nth-child(4), th:nth-child(5), td:nth-child(4), td:nth-child(5) {
+  width: 30%;
+}
+
+
+
+.content_td {
   max-width: 100%;
   max-height: 100px;
   overflow-y: auto;
   text-overflow: ellipsis;
 }
 
-/* Column Size for thead */
+tbody tr:nth-child(odd) {
+  background-color: #fff0c7; /* Zebra striping color pattern */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down; /* Scale-down images */
+}
+
+td.form-field input {
+  width: 90%;
+}
 
 
-/* Column size for tbody */
